@@ -1,2 +1,2 @@
 # asaprappy
-asaprappy, a rap based music &amp; sound visualizer.
+Asaprappy, a rap based music &amp; sound visualizer.
