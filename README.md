@@ -1,4 +1,4 @@
 # asaprappy
 Asaprappy, a rap based music &amp; sound visualizer.
 
-![Alt text](./meme/meme.png?raw=true "Title")
+![Alt text](./memes/meme.png?raw=true "Title")
