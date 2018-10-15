@@ -28,67 +28,67 @@
 			},
 			w: {
 				sound: new Howl({
-	  			src: ['assets/sounds/clay.mp3']
+	  			src: ['sounds/1738.mp3']
 				}),
 				color: '#2ecc71'
 			},
 			e: {
 				sound: new Howl({
-	  				src: ['assets/sounds/confetti.mp3']
+	  				src: ['sounds/2chainzshort.mp3']
 				}),
 				color: '#3498db'
 			},
 			r: {
 				sound: new Howl({
-	  				src: ['assets/sounds/corona.mp3']
+	  				src: ['sounds/alrightdrake.mp3']
 				}),
 				color: '#9b59b6'
 			},
 			t: {
 				sound: new Howl({
-	  				src: ['assets/sounds/dotted-spiral.mp3']
+	  				src: ['sounds/ahhh.mp3']
 				}),
 				color: '#34495e'
 			},
 			y: {
 				sound: new Howl({
-	  				src: ['assets/sounds/flash-1.mp3']
+	  				src: ['sounds/anothaone.mp3']
 				}),
 				color: '#16a085'
 			},
 			u: {
 				sound: new Howl({
-	  				src: ['assets/sounds/flash-2.mp3']
+	  				src: ['sounds/aybaby.mp3']
 				}),
 				color: '#27ae60'
 			},
 			i: {
 				sound: new Howl({
-	  				src: ['assets/assets/sounds/flash-3.mp3']
+	  				src: ['sounds/brrbrr.mp3']
 				}),
 				color: '#2980b9'
 			},
 			o: {
 				sound: new Howl({
-					src: ['assets/sounds/glimmer.mp3']
+					src: ['sounds/ladiesandgentlemann.mp3']
 				}),
 				color: '#8e44ad'
 			},
 			p: {
 				sound: new Howl({
-	  				src: ['assets/sounds/moon.mp3']
+	  				src: ['sounds/mr305.mp3']
 				}),
 				color: '#2c3e50'
 			},
 			a: {
 				sound: new Howl({
-	  				src: ['assets/sounds/pinwheel.mp3']
+	  				src: ['sounds/mynameis.mp3']
 				}),
 				color: '#f1c40f'
 			},
 			s: {
 				sound: new Howl({
-	  				src: ['assets/sounds/piston-1.mp3']
+	  				src: ['sounds/nickipurrrr.mp3']
 				}),
 				color: '#e67e22'
 			},	
@@ -177,7 +177,6 @@
 				color: '#2c3e50'
 			}
 		};
-
 	var circles = [];
 	function onKeyDown(event) {
 		<!-- If truthy (if keyData exists do this else dont do anything) -->
