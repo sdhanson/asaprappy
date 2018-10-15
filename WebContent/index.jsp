@@ -24,25 +24,29 @@
 				sound: new Howl({
 	  			src: ['sounds/travis_scott.mp3']
 				}),
-				color: '#1abc9c'
+				color: '#1abc9c',
+				id: 'travis'
 			},
 			w: {
 				sound: new Howl({
 	  			src: ['sounds/1738.mp3']
 				}),
-				color: '#2ecc71'
+				color: '#2ecc71',
+				id: 'fetty'
 			},
 			e: {
 				sound: new Howl({
 	  				src: ['sounds/2chainzshort.mp3']
 				}),
-				color: '#3498db'
+				color: '#3498db',
+				id: '2chainz'
 			},
 			r: {
 				sound: new Howl({
 	  				src: ['sounds/alrightdrake.mp3']
 				}),
-				color: '#9b59b6'
+				color: '#9b59b6',
+				id: 'drake'
 			},
 			t: {
 				sound: new Howl({
@@ -54,7 +58,8 @@
 				sound: new Howl({
 	  				src: ['sounds/anothaone.mp3']
 				}),
-				color: '#16a085'
+				color: '#16a085',
+				id: 'djkhaled'
 			},
 			u: {
 				sound: new Howl({
@@ -78,19 +83,22 @@
 				sound: new Howl({
 	  				src: ['sounds/mr305.mp3']
 				}),
-				color: '#2c3e50'
+				color: '#2c3e50',
+				id: 'pitbull'
 			},
 			a: {
 				sound: new Howl({
 	  				src: ['sounds/mynameis.mp3']
 				}),
-				color: '#f1c40f'
+				color: '#f1c40f',
+				id: 'eminem'
 			},
 			s: {
 				sound: new Howl({
 	  				src: ['sounds/nickipurrrr.mp3']
 				}),
-				color: '#e67e22'
+				color: '#e67e22',
+				id: 'nicki'
 			},	
 			d: {
 				sound: new Howl({
@@ -178,9 +186,37 @@
 			}
 		};
 	var circles = [];
+	var rasters = [];
+	function showImage(id) {
+		// Create a raster item using the image tag with id='mona'
+		if(id == null) { id = 'asap'; }
+
+		var raster = new Raster(id);
+
+		var maxPoint = new Point(view.size.width, view.size.height);
+		
+		var randomPoint = Point.random();
+		
+		var point = maxPoint * randomPoint;
+
+		// Move the raster to the center of the view
+		raster.position = point;
+
+		// Scale the raster by 50%
+		raster.scale(0.25);
+
+		// Rotate the raster by 45 degrees:
+		raster.rotate(0);
+
+		rasters.push(raster);
+	}
+
 	function onKeyDown(event) {
+
 		<!-- If truthy (if keyData exists do this else dont do anything) -->
+
 		if(keyData[event.key]) {
+			showImage(keyData[event.key].id);
 			var maxPoint = new Point(view.size.width, view.size.height);
 			<!-- Basically it is doing this: new Point(Math.random(), Math.random()) -->
 			var randomPoint = Point.random();
@@ -196,11 +232,22 @@
 	}
 	<!-- On each frame perform animate - change hue color and scale circle size -->
 	function onFrame(event) {
+		for(var i=0; i < rasters.length; i++) {
+
+			if(i%2 == 0) {
+				//rasters[i].rotate(180 * event.delta);
+				//rasters[i].position.x += 5;
+			} else {
+				rasters[i].position.x += 1;
+				//rasters[i].scale(1.001);
+			}
+
+		}
 		<!-- Loop through all circles and perform animate -->
 		<!-- Optimization: need to remove circle once done -->
 		for(var i = 0; i < circles.length; i++) {
-			circles[i].fillColor.hue += 1;
-			<!-- Scales by 90% of the size -->
+			circles[i].fillColor.hue += 1;			<!-- Scales by 90% of the size -->
+
 			circles[i].scale(0.9);
 			<!-- Remove circle from array if area is less than 1 -->
 			if(circles[i].area < 1) {
@@ -219,6 +266,18 @@
 <div style="height: 100%; width: 100%; position: absolute; left: 0; padding: 0;" class="container-fluid" id="homepage">
 	<canvas id="interactive" resize></canvas>
 	<img style="max-height: 300px; position: fixed; top: 0; left: 0;" src="src/asapdiorlogo.png" id="logo">
+	
+	
+	<!-- All of the loaded images hidden :) -->
+	<img class="d-none" id="asap" src="src/asapdiorlogoblue.png">
+	<img class="d-none" id="travis" src="src/travis.png">
+	<img class="d-none" id="fetty" src="src/fettywap.png">
+	<img class="d-none" id="2chainz" src="src/2chainz.png">
+	<img class="d-none" id="djkhaled" src="src/djkhaled.png">
+	<img class="d-none" id="drake" src="src/drake.png">
+	<img class="d-none" id="eminem" src="src/eminem.png">
+	<img class="d-none" id="pitbull" src="src/pitbull.png">
+	<img class="d-none" id="nicki" src="src/nicki.png">
 </div>
 
 
