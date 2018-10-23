@@ -22,56 +22,52 @@
 		var keyData = {
 			q: {
 				sound: new Howl({
-	  			src: ['sounds/travis_scott.mp3']
+	  			src: ['sounds/yeahtravis.mp3']
 				}),
-				color: '#1abc9c',
-				id: 'travis'
+				id: 'travis',
+				time: 2,
 			},
 			w: {
 				sound: new Howl({
 	  			src: ['sounds/1738.mp3']
 				}),
-				color: '#2ecc71',
 				id: 'fetty'
 			},
 			e: {
 				sound: new Howl({
 	  				src: ['sounds/2chainzshort.mp3']
 				}),
-				color: '#3498db',
 				id: '2chainz'
 			},
 			r: {
 				sound: new Howl({
 	  				src: ['sounds/alrightdrake.mp3']
 				}),
-				color: '#9b59b6',
 				id: 'drake'
 			},
 			t: {
 				sound: new Howl({
 	  				src: ['sounds/ahhh.mp3']
 				}),
-				color: '#34495e'
+				id: 'chance'
 			},
 			y: {
 				sound: new Howl({
 	  				src: ['sounds/anothaone.mp3']
 				}),
-				color: '#16a085',
 				id: 'djkhaled'
 			},
 			u: {
 				sound: new Howl({
 	  				src: ['sounds/aybaby.mp3']
 				}),
-				color: '#27ae60'
+				id: 'hurricanechris'
 			},
 			i: {
 				sound: new Howl({
 	  				src: ['sounds/brrbrr.mp3']
 				}),
-				color: '#2980b9'
+				id: '2chainz'
 			},
 			o: {
 				sound: new Howl({
@@ -83,110 +79,108 @@
 				sound: new Howl({
 	  				src: ['sounds/mr305.mp3']
 				}),
-				color: '#2c3e50',
 				id: 'pitbull'
 			},
 			a: {
 				sound: new Howl({
 	  				src: ['sounds/mynameis.mp3']
 				}),
-				color: '#f1c40f',
 				id: 'eminem'
 			},
 			s: {
 				sound: new Howl({
 	  				src: ['sounds/nickipurrrr.mp3']
 				}),
-				color: '#e67e22',
 				id: 'nicki'
 			},	
 			d: {
 				sound: new Howl({
-	  				src: ['assets/sounds/piston-2.mp3']
+	  				src: ['sounds/woah.mp3']
 				}),
-				color: '#e74c3c'
+				id: 'bigsean'
 			},
 			f: {
 				sound: new Howl({
-	  				src: ['assets/sounds/prism-1.mp3']
+	  				src: ['sounds/liljon.mp3']
 				}),
-				color: '#95a5a6'
+				id: 'liljon'
 			},
 			g: {
 				sound: new Howl({
-	  				src: ['assets/sounds/prism-2.mp3']
+	  				src: ['sounds/jayz.mp3']
 				}),
-				color: '#f39c12'
+				id: 'jayz'
 			},
 			h: {
 				sound: new Howl({
-	  				src: ['assets/sounds/prism-3.mp3']
+	  				src: ['sounds/panda.mp3']
 				}),
-				color: '#d35400'
+				id: 'desiigner'
 			},
 			j: {
 				sound: new Howl({
-	  				src: ['assets/assets/sounds/splits.mp3']
+	  				src: ['sounds/frenchmontana.mp3']
 				}),
-				color: '#1abc9c'
+				id: 'frenchmontana'
 			},
 			k: {
 				sound: new Howl({
-	  				src: ['assets/sounds/squiggle.mp3']
+	  				src: ['sounds/drummaboy.mp3']
 				}),
-				color: '#2ecc71'
+				id: 'drummaboy'
 			},
 			l: {
 				sound: new Howl({
-	  				src: ['assets/sounds/strike.mp3']
+	  				src: ['sounds/schoolboyq.mp3']
 				}),
-				color: '#3498db'
+				id: 'schoolboyq'
 			},
 			z: {
 				sound: new Howl({
-	  				src: ['assets/sounds/suspension.mp3']
+	  				src: ['sounds/djmustard.mp3']
 				}),
-				color: '#9b59b6'
+				id: 'djmustard'
 			},
 			x: {
 				sound: new Howl({
-	  				src: ['assets/sounds/timer.mp3']
+	  				src: ['sounds/souljaboy.mp3']
 				}),
-				color: '#34495e'
+				id: 'souljaboy'
 			},
 			c: {
 				sound: new Howl({
-	  				src: ['assets/sounds/ufo.mp3']
+	  				src: ['sounds/nickiyoungmoney.mp3']
 			}),
-			color: '#16a085'
+				id: 'nicki2'
 			},
 			v: {
 				sound: new Howl({
-	  				src: ['assets/sounds/veil.mp3']
+	  				src: ['sounds/djkhaled.mp3']
 				}),
-				color: '#27ae60'
+				id: 'djkhaled'
 			},
 			b: {
 				sound: new Howl({
-	  				src: ['assets/sounds/wipe.mp3']
+	  				src: ['sounds/souljaboy2.mp3']
 				}),
-				color: '#2980b9'
+				id: 'souljaboy'
 			},
 			n: {
 				sound: new Howl({
-					src: ['assets/sounds/zig-zag.mp3']
+					src: ['sounds/straightuptravis.mp3']
 				}),
-				color: '#8e44ad'
+				id: 'travis'
 			},
 			m: {
 				sound: new Howl({
-	  				src: ['assets/sounds/moon.mp3']
+	  				src: ['sounds/ladiesandgentlemann.mp3']
 				}),
-				color: '#2c3e50'
+				id: 'drummaboy'
 			}
 		};
-	var circles = [];
+
 	var rasters = [];
+	var time = 0;
 	function showImage(id) {
 		// Create a raster item using the image tag with id='mona'
 		if(id == null) { id = 'asap'; }
@@ -208,65 +202,88 @@
 		// Rotate the raster by 45 degrees:
 		raster.rotate(0);
 
-		rasters.push(raster);
+		// set paths !!!
+		var num = 2;
+		if(id.localeCompare('asap') == 0) { num = 3; }
+		if(id.localeCompare('chance') == 0) { num = 4; }
+		if(id.localeCompare('drake') == 0) { num = 5; }
+		if(id.localeCompare('nicki') == 0) { num = 6; }
+		rasters.push({image: raster, time: 2, path: num});
 	}
 
 	function onKeyDown(event) {
 
-		<!-- If truthy (if keyData exists do this else dont do anything) -->
-
 		if(keyData[event.key]) {
 			showImage(keyData[event.key].id);
-			var maxPoint = new Point(view.size.width, view.size.height);
-			<!-- Basically it is doing this: new Point(Math.random(), Math.random()) -->
-			var randomPoint = Point.random();
-			<!-- Pretty much doing Math.random() * maxPoint -->
-			var point = maxPoint * randomPoint;
-			var newCircle = new Path.Circle(point, 500);
-			newCircle.fillColor = keyData[event.key].color;
 			keyData[event.key].sound.play();
-			circles.push(newCircle);
-			<!-- Cant do this because push() pushes in the string "orange" since it is the last time returned -->
-			<!-- circles.push(new Path.Circle(point, 500).fillColor = "orange"); -->
 		}
+
 	}
-	<!-- On each frame perform animate - change hue color and scale circle size -->
+
+	// Animation frames
 	function onFrame(event) {
+		
 		for(var i=0; i < rasters.length; i++) {
-
-			if(i%2 == 0) {
-				//rasters[i].rotate(180 * event.delta);
-				//rasters[i].position.x += 5;
-			} else {
-				rasters[i].position.x += 1;
-				//rasters[i].scale(1.001);
+			
+			// If image time is up, destroy
+			rasters[i].time -= event.delta;
+			if(rasters[i].time < 0) {
+				rasters[i].image.remove();
+				rasters.splice(i, 1);
+				continue;
 			}
 
-		}
-		<!-- Loop through all circles and perform animate -->
-		<!-- Optimization: need to remove circle once done -->
-		for(var i = 0; i < circles.length; i++) {
-			circles[i].fillColor.hue += 1;			<!-- Scales by 90% of the size -->
-
-			circles[i].scale(0.9);
-			<!-- Remove circle from array if area is less than 1 -->
-			if(circles[i].area < 1) {
-				circles[i].remove();
-				<!-- splice(index, amound to remove) -->
-				circles.splice(i, 1);
-				<!-- Console array shrinks till it is empty -->
-				console.log(circles);
+			// define paths !!!!
+			switch(rasters[i].path) {
+				case 3:
+					// var sinus = Math.sin(event.time * 4 + i);
+					// rasters[i].image.position.x = sinus * 100 + 350;
+					rasters[i].image.position.y -= 5;
+					break;
+				case 4:
+					rasters[i].image.rotate(-180 * event.delta);
+					break;
+				case 5:
+					rasters[i].image.position.x += 1.001;
+					break;
+				case 6:
+					rasters[i].image.position += 2;
+					break;
+				default:
+					rasters[i].image.position.x += 1;
+					rasters[i].image.scale(0.99);
+					break;
+					
 			}
+
 		}
 	}
+	</script>
+	
+	<script>
+	$(document).ready(function() {
+		$("#lilasap").on("mouseenter", function() {
+		    $("#sidebar").hide().removeClass("d-none").fadeIn();
+/*  		    $("#lilasap").addClass("invisible");
+ */ 		});
+		
+		
+		$("#sidebar").on("mouseleave", function() {
+		    $("#sidebar").addClass("d-none");
+/* 		    $(".loaded-quote").removeClass("invisible");
+ */		});
+	});
+
 	</script>
 </head>
 
 <body>
-<div style="height: 100%; width: 100%; position: absolute; left: 0; padding: 0;" class="container-fluid" id="homepage">
+
+<!-- main homepage body -->
+<div  class="container-fluid col-12" id="homepage">
 	<canvas id="interactive" resize></canvas>
-	<img style="max-height: 300px; position: fixed; top: 0; left: 0;" src="src/asapdiorlogo.png" id="logo">
-	
+	<!-- visible logo -->
+	<img src="src/asapdiorlogo.png" id="logo">
 	
 	<!-- All of the loaded images hidden :) -->
 	<img class="d-none" id="asap" src="src/asapdiorlogoblue.png">
@@ -278,6 +295,41 @@
 	<img class="d-none" id="eminem" src="src/eminem.png">
 	<img class="d-none" id="pitbull" src="src/pitbull.png">
 	<img class="d-none" id="nicki" src="src/nicki.png">
+	<img class="d-none" id="chance" src="src/chance.png">
+	<img class="d-none" id="bigsean" src="src/bigsean.png">
+	<img class="d-none" id="liljon" src="src/liljon.png">
+	<img class="d-none" id="drummaboy" src="src/drummaboy.png">
+	<img class="d-none" id="desiigner" src="src/desiigner.png">
+	<img class="d-none" id="djmustard" src="src/djmustard.png">
+	<img class="d-none" id="frenchmontana" src="src/frenchmontana.png">
+	<img class="d-none" id="hurricanechris" src="src/hurricanechris.png">
+	<img class="d-none" id="jayz" src="src/jayz.png">
+	<img class="d-none" id="liljon" src="src/liljon.png">
+	<img class="d-none" id="nicki2" src="src/nicki2.png">
+	<img class="d-none" id="schoolboyq" src="src/schoolboyq.png">
+	<img class="d-none" id="souljaboy" src="src/souljaboy2.png">
+		
+	<!-- sidebar image -->
+	<img class="rounded-circle" style="max-height: 200px; position: fixed; bottom: 0; right: -110px;" id="lilasap" src="src/rotateno.png">
+	
+	
+</div>
+
+<!-- sidebar: hover over lil asap and boxes slide out!! -->
+<div class="col-2 d-none float-right" style="height: 100vh;" id="sidebar">
+
+	<div class="row justify-content-center" style="margin-top: 50%; margin-bottom: 50%;">
+		<div> screen name w padaloma</div>
+		<div>most used thing</div>
+		<div>random rapper image</div>
+		<div>friend user list and active or not</div>
+	</div>
+	
+	
+	
+	
+	<img class="rounded-circle" style="max-height: 200px; position: fixed; bottom: 0; right: -110px;" id="lilasap" src="src/rotateno.png">
+	
 </div>
 
 

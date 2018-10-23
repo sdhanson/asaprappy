@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+body {
+	background-color: pink;
+}
+
 canvas {
 	background-color: pink;
 	width: 100%;
@@ -13,10 +17,21 @@ canvas {
 	left: 0;
 }
 
+#nav {
+	max-height: 300px; 
+	position: fixed; 
+	bottom: 0; 
+	right: 0;
+}
+
 #homepage {
 	height: 100%; 
 	width: 100%; 
 	position: absolute; 
 	left: 0; 
 	padding: 0;
+}
+
+#sidebar {
+	background-color: pink;
 }
