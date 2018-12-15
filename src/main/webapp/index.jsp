@@ -1439,7 +1439,7 @@
 <script type="text/javascript">
 var socket;
 	function connectToServer() {
-		socket = new WebSocket("ws://localhost:8080/CSCI201_FinalProject_asaprappy/ws");
+		socket = new WebSocket("ws://"+window.location.hostname+":"+window.location.port+window.location.pathname.replace("index.jsp","ws"));
 		socket.onopen = function(event) {
 			Login();
 		}
