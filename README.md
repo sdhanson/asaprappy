@@ -2,9 +2,10 @@
 
 ## BUILD
 
-<
+```
 >cd <asaprappy project root>
 >mvn clean package
+```
 
 ## DEPLOY TO LOCAL TOMCAT
 
