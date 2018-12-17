@@ -17,7 +17,7 @@ https://tomcat.apache.org/tomcat-9.0-doc/setup.html
 
 Update JDBCDriver.java DB URI with correct host, db name, password, etc.
 
-TODO: Better to pull the DB URI from a config file outside of the .war so you don't have to change code and build for different environment or when pword changes.  Typically I would put a asaprappy.properties file under <tomcat install>/lib/ so it is in the class path.
+TODO: Better to pull the DB URI from a config file outside of the .war so you don't have to change code and build for different environment or when pword changes.  Typically I would put a asaprappy.properties file under &lt;tomcat install&gt;/lib/ so it is in the class path.
 
 TODO:  Instructions for creating tables should go here.  Is there a SQL script for this?
 
