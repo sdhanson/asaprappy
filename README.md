@@ -9,6 +9,18 @@ Install maven - https://maven.apache.org/install.html
 >mvn clean package
 ```
 
+## Setup MySQL and Tomcat
+
+https://dev.mysql.com/doc/refman/8.0/en/installing.html
+
+https://tomcat.apache.org/tomcat-9.0-doc/setup.html
+
+Update JDBCDriver DB URI with db name and password.
+
+TODO: Better to pull the DB URI from a config file outside of the .war so you don't have to change code and build for different environment or when pword changes.
+
+TODO:  Instructions for setting up tables.  Where is the SQL script to create the DB?  
+
 ## DEPLOY TO LOCAL TOMCAT
 
 ```
