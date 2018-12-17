@@ -2,6 +2,8 @@
 
 ## BUILD
 
+Install maven - https://maven.apache.org/install.html
+
 ```
 >cd <asaprappy project root>
 >mvn clean package
